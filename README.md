@@ -1,11 +1,9 @@
 ## NYT Books Data Visualization _(...more creative name to come soon)_
-<br>
 
 ### **Background** 🏞
 
 This project serves as a data visualization for The New York Times’ best sellers book list using the NYT Books API and the Google Books API. Users can filter the books they’re shown by list and week, and each book is depicted as a flippable card with relevant book data.
 
-<br>
 
 ### **Functionality & MVPs** 🏋🏼‍♀️
 
@@ -28,7 +26,6 @@ In addition, this project will include:
 1. User instructions
 2. Production README
 
-<br>
 
 ### **Main Wireframe** 🖼
 
@@ -42,7 +39,6 @@ The right side panel consists of a few sections including instructions, a dropdo
 
 Finally, the bottom right corner contains icons with links to my LinkedIn, Github, and AngelList profiles.
 
-<br>
 
 ### **Technologies, Libraries, APIs** 👩🏼‍💻
 
@@ -53,7 +49,6 @@ This project will be implemented with the following technologies:
 - Webpack and Babel to bundle and transpile the source JavaScript code 🚀
 - npm to manage project dependencies 👀
 
-<br>
 
 ### **Implementation Timeline** 📆
 
