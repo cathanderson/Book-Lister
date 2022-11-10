@@ -7,7 +7,7 @@ This project serves as a data visualization for The New York Times’ best selle
 
 ### **Functionality & MVPs** 🏋🏼‍♀️
 
-In ***NYT Best Sellers Data Visualization***, users will be able to:
+In ***NYT Books Data Visualization***, users will be able to:
 
 1. Filter the books they’re shown by list (hardcover fiction, paperback nonfiction, etc.)
 2. Filter the books they’re shown by week (since new best seller lists come out weekly)
