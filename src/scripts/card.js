@@ -1,17 +1,22 @@
 // all JS code goes in an indiviual file in this script folder
 
 class Card {
-  constructor(ele) {
-    this.ele = ele;
+  constructor() {
+    const card = document.createElement("div");
+    card.setAttribute("class", "card");
 
-    const front = document.createElement("div");
+    const front = document.createElement("ol");
     front.setAttribute("id", "front-of-card");
 
-    const back = document.createElement("div");
+    const back = document.createElement("ol");
     back.setAttribute("id", "back-of-card");
 
-    ele.appendChild(front);
-    ele.appendChild(back);
+    const cardHolder = document.getElementById("card-holder");
+
+    cardHolder.appendChild(card);
+
+    card.appendChild(front);
+    card.appendChild(back);
   }
 }
 

@@ -32,24 +32,19 @@ export const dataFetcher = async function () {
       return response.json();
     })
     .then((data) => {
-        data.results.books.forEach((book) => {
-          cardFiller(book);
-        });
+      data.results.books.forEach((book) => {
+        cardFiller(book);
+      });
     })
     .catch((error) => {
       console.error(error);
     });
 };
 
-// const addDataToArray = function () {
-//   dataFetcher().then((data) => {
-//     console.log(data.book);
-//   });
-// };
-
-// addDataToArray();
-
 export const cardFiller = function (book) {
+//   const cardEle = document.getElementById("card");
+//   new Card(cardEle);
+
   const div = document.createElement("div");
   div.textContent = book.title;
 
