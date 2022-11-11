@@ -1,7 +1,7 @@
-import Example from "./scripts/example";
+import Card from "./scripts/card";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const main = document.getElementById("main");
+  const cardEle = document.getElementById("card");
   //grabbing ele with id of main then passing it into example class
-  new Example(main);
+  new Card(cardEle);
 });

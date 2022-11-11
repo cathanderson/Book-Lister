@@ -54,7 +54,7 @@ This project will be implemented with the following technologies:
 
 **Thursday Afternoon**: Complete final proposal and setup project, including getting webpack up and running.
 
-**Friday**: Build a basic HTML skeleton for main and side sections. Ensure capability of rendering results from API calls in browser using AJAX. Build a lightweight backend to hide API keys/allow for CORS proxy if needed.
+**Friday**: Build a basic HTML skeleton for main and side sections. Ensure capability of rendering results from API calls in browser using AJAX. Flesh out a basic Card/Book class. Build a lightweight backend to hide API keys/allow for CORS proxy if needed.
 
 **Weekend**: Implement display of main book/card grid based on list title, as well as accurate data fields on cards. Implement flipping action for cards.
 
