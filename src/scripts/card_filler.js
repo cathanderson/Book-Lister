@@ -42,12 +42,25 @@ export const dataFetcher = async function () {
 };
 
 export const cardFiller = function (book) {
-//   const cardEle = document.getElementById("card");
-//   new Card(cardEle);
+  const frontData = ["book_image", "title", "author", "rank", "weeks_on_list"];
+  const backData = ["description", "buy_links[5].url", "book_review_link"];
 
-  const div = document.createElement("div");
-  div.textContent = book.title;
+  let newCard = new Card();
+//   debugger;
 
-  const card = document.getElementById("front-of-card");
-  card.appendChild(div);
+  //   for (let i = 0; i < frontData.length; i++) {
+  //     let li = document.createElement("li");
+  //     li.textContent = book[frontData[i]];
+  //     debugger;
+  //     // const front = document.getElementById("front-of-card");
+  //     newCard.appendChild(li);
+  //   }
+
+  frontData.forEach((category) => {
+    let li = document.createElement("li");
+    li.textContent = book[category];
+    // debugger;
+    const front = document.getElementById("front-of-card");
+    front.appendChild(li);
+  });
 };
