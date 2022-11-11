@@ -12,8 +12,6 @@ class Card {
 
     ele.appendChild(front);
     ele.appendChild(back);
-
-
   }
 }
 
