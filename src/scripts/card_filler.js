@@ -21,37 +21,38 @@ import Card from "./card";
 // buy_links[5].url (buy_links is an array of 6 vendors, choose the 5th ele for indiebound and select url from subarr )
 // book_review_link (sometimes null- consider what to do in this case)
 
-export const dataFetcher = function (handler) {
-  //   let collectedData = [];
+export const dataFetcher = async function () {
   const url =
     "https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=P8pcb2dgnGF9YiOs6vGO2ATSlJvDl78Z";
-  //   fetch(url)
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       data.results.books.map((book) => {
-  //         return book[category];
-  //         // const bookData = Promise.resolve(book[category]);
-  //         // Promise.resolve(bookData);
-  //         // collectedData.push(bookData);
-  //       });
-  //     });
-
-  // //   debugger;
-  // //   return collectedData;
-
   fetch(url)
-    .then((res) => {
-      return res.json();
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Networking issue :/");
+      }
+      return response.json();
     })
     .then((data) => {
-      var a = [];
-      a.push(data);
-      handler(a);
+        data.results.books.forEach((book) => {
+          cardFiller(book);
+        });
+    })
+    .catch((error) => {
+      console.error(error);
     });
 };
 
-export const myHandler = function (result) {
-  return result;
-};
+// const addDataToArray = function () {
+//   dataFetcher().then((data) => {
+//     console.log(data.book);
+//   });
+// };
 
-export const cardFiller = function () {};
+// addDataToArray();
+
+export const cardFiller = function (book) {
+  const div = document.createElement("div");
+  div.textContent = book.title;
+
+  const card = document.getElementById("front-of-card");
+  card.appendChild(div);
+};
