@@ -21,18 +21,37 @@ import Card from "./card";
 // buy_links[5].url (buy_links is an array of 6 vendors, choose the 5th ele for indiebound and select url from subarr )
 // book_review_link (sometimes null- consider what to do in this case)
 
-export const cardFiller = function () {};
-
-export const dataFetcher = function () {
+export const dataFetcher = function (handler) {
+  //   let collectedData = [];
   const url =
     "https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=P8pcb2dgnGF9YiOs6vGO2ATSlJvDl78Z";
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      //   console.log(data.results);
+  //   fetch(url)
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       data.results.books.map((book) => {
+  //         return book[category];
+  //         // const bookData = Promise.resolve(book[category]);
+  //         // Promise.resolve(bookData);
+  //         // collectedData.push(bookData);
+  //       });
+  //     });
 
-      data.results.books.map((book) => {
-        console.log(book.title);
-      });
+  // //   debugger;
+  // //   return collectedData;
+
+  fetch(url)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      var a = [];
+      a.push(data);
+      handler(a);
     });
 };
+
+export const myHandler = function (result) {
+  return result;
+};
+
+export const cardFiller = function () {};

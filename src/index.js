@@ -4,4 +4,4 @@ import * as allCardFiller from "./scripts/card_filler";
 const cardEle = document.getElementById("card");
 new Card(cardEle);
 
-allCardFiller.dataFetcher();
+console.log(allCardFiller.dataFetcher(allCardFiller.myHandler));
