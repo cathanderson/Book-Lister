@@ -7,6 +7,7 @@ section {
     display: flex;
     flex-flow: wrap;
     justify-content: center;
+    /* transform: translate(-50%, -50%); */
 }
 
 .card {
@@ -14,10 +15,37 @@ section {
     margin: 30px;
     padding: 30px;
     width: 250px;
+    height: 450px;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+}
+
+.front-of-card {
+    /* position: absolute; */
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: rgb(255, 251, 0);
+}
+
+.back-of-card {
+    /* position: absolute; */
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #ffb338;
+    transform: rotateY(180deg);
 }
 
 img {
     height: 350px;
     width: auto;
-
+    /* align-items: center; */
 }
+
+.flipCard {
+    transform: rotateY(180deg);
+}
+
