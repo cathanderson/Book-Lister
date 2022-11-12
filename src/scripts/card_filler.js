@@ -19,7 +19,7 @@ import Card from "./card";
 // back of card:
 // description
 // buy_links[5].url (buy_links is an array of 6 vendors, choose the 5th ele for indiebound and select url from subarr )
-// book_review_link (sometimes null- consider what to do in this case)
+// book_review_link -- JK- this is almost always null, so we're skipping it
 
 export const dataFetcher = async function () {
   const url =
@@ -32,8 +32,16 @@ export const dataFetcher = async function () {
       return response.json();
     })
     .then((data) => {
-      data.results.books.forEach((book) => {
-        cardFiller(book);
+      for (let i = 0; i < data.results.books.length; i++) {
+        const card = document.createElement("div");
+        card.setAttribute("id", `card-${i}`);
+        card.setAttribute("class", "card");
+
+        const cardHolder = document.getElementById("card-holder");
+        cardHolder.appendChild(card);
+      }
+      data.results.books.forEach((book, i) => {
+        cardFiller(book, i);
       });
     })
     .catch((error) => {
@@ -41,42 +49,42 @@ export const dataFetcher = async function () {
     });
 };
 
-export const cardFiller = function (book) {
+export const cardFiller = function (book, i) {
   const frontData = ["book_image", "title", "author", "rank", "weeks_on_list"];
-  const backData = ["description", "buy_links[5].url", "book_review_link"];
+  const backData = ["description", "buy_links[5].url", "amazon_product_url"];
 
-  const card = document.createElement("div");
-  card.setAttribute("class", "card");
+  const card = document.getElementById(`card-${i}`);
 
-  const cardHolder = document.getElementById("card-holder");
-
-  cardHolder.appendChild(card);
+  // MAKING FRONT OF CARD
 
   let front = document.createElement("ol");
-  front.setAttribute("id", "front-of-card");
+  front.setAttribute("class", "front-of-card");
 
   frontData.forEach((category) => {
     let li = document.createElement("li");
+    li.setAttribute("class", category);
     li.textContent = book[category];
     front.appendChild(li);
   });
 
   card.appendChild(front);
 
+  // MAKING BACK OF CARD
+
   let back = document.createElement("ol");
-  back.setAttribute("id", "back-of-card");
+  back.setAttribute("class", "back-of-card");
 
   backData.forEach((category) => {
-    // let li = document.createElement("li");
+    let li = document.createElement("li");
+    li.setAttribute("class", category);
+
     if (category === "buy_links[5].url") {
-      let li = document.createElement("li");
       li.textContent = book.buy_links[5].url.toString();
-      back.appendChild(li);
     } else {
-      let li = document.createElement("li");
       li.textContent = book[category];
-      back.appendChild(li);
     }
+
+    back.appendChild(li);
   });
 
   card.appendChild(back);
