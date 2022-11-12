@@ -33,10 +33,12 @@ export const dataFetcher = async function () {
     })
     .then((data) => {
       for (let i = 0; i < data.results.books.length; i++) {
+        // MAKING CARD
         const card = document.createElement("div");
-        card.setAttribute("id", `card-${i}`);
+        card.setAttribute("id", `card-${i + 1}`);
         card.setAttribute("class", "card");
 
+        // APPENDING CARD TO MAIN SECTION
         const cardHolder = document.getElementById("card-holder");
         cardHolder.appendChild(card);
       }
@@ -49,11 +51,51 @@ export const dataFetcher = async function () {
     });
 };
 
+function titleize(str) {
+  const littleWords = [
+    "a",
+    "an",
+    "and",
+    "at",
+    "but",
+    "by",
+    "for",
+    "from",
+    "in",
+    "into",
+    "of",
+    "off",
+    "over",
+    "the",
+    "to",
+  ];
+
+  let titleized = [];
+
+  let rawWords = str.split(" ");
+  let words = [];
+
+  rawWords.map((word) => {
+    words.push(word.toLowerCase());
+  });
+
+  for (let i = 0; i < words.length; i++) {
+    let cappsedWord =
+      words[i][0].toUpperCase() + words[i].slice(1).toLowerCase();
+    if (i === 0 || !littleWords.includes(words[i])) {
+      titleized.push(cappsedWord);
+    } else {
+      titleized.push(words[i]);
+    }
+  }
+  return titleized.join(" ");
+}
+
 export const cardFiller = function (book, i) {
   const frontData = ["book_image", "title", "author", "rank", "weeks_on_list"];
   const backData = ["description", "buy_links[5].url", "amazon_product_url"];
 
-  const card = document.getElementById(`card-${i}`);
+  const card = document.getElementById(`card-${i + 1}`);
 
   // MAKING FRONT OF CARD
 
@@ -61,10 +103,22 @@ export const cardFiller = function (book, i) {
   front.setAttribute("class", "front-of-card");
 
   frontData.forEach((category) => {
-    let li = document.createElement("li");
-    li.setAttribute("class", category);
-    li.textContent = book[category];
-    front.appendChild(li);
+    if (category === "book_image") {
+      let img = document.createElement("img");
+      img.setAttribute("class", category);
+      img.setAttribute("src", book["book_image"]);
+      img.setAttribute("alt", `cover image for ${titleize(book["title"])}`);
+      front.appendChild(img);
+    } else {
+      let li = document.createElement("li");
+      li.setAttribute("class", category);
+      if (category === "title") {
+        li.textContent = titleize(book["title"]);
+      } else {
+        li.textContent = book[category];
+      }
+      front.appendChild(li);
+    }
   });
 
   card.appendChild(front);
@@ -75,16 +129,28 @@ export const cardFiller = function (book, i) {
   back.setAttribute("class", "back-of-card");
 
   backData.forEach((category) => {
-    let li = document.createElement("li");
-    li.setAttribute("class", category);
-
-    if (category === "buy_links[5].url") {
-      li.textContent = book.buy_links[5].url.toString();
-    } else {
+    if (category === "description") {
+      let li = document.createElement("li");
+      li.setAttribute("class", category);
       li.textContent = book[category];
+      back.appendChild(li);
+    } else if (category === "buy_links[5].url") {
+      let li = document.createElement("li");
+      li.setAttribute("class", category);
+      let a = document.createElement("a");
+      a.setAttribute("href", book.buy_links[5].url);
+      a.textContent = "Purchase from an indie bookstore with IndieBound";
+      back.appendChild(li);
+      li.appendChild(a);
+    } else if (category === "amazon_product_url") {
+      let li = document.createElement("li");
+      li.setAttribute("class", category);
+      let a = document.createElement("a");
+      a.setAttribute("href", book[category]);
+      a.textContent = "Purchase from Amazon";
+      back.appendChild(li);
+      li.appendChild(a);
     }
-
-    back.appendChild(li);
   });
 
   card.appendChild(back);
