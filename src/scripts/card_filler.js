@@ -46,7 +46,25 @@ export const cardFiller = function (book) {
   const backData = ["description", "buy_links[5].url", "book_review_link"];
 
   let newCard = new Card();
-//   debugger;
+
+//   let front = document.createElement("ol");
+//   front.setAttribute("id", "front-of-card");
+
+//   frontData.forEach((category) => {
+//     let li = document.createElement("li");
+//     li.textContent = book[category];
+//     // debugger;
+//     front.appendChild(li);
+//   });
+
+//   newCard.appendChild(front);
+
+  //   const back = document.createElement("ol");
+  //   back.setAttribute("id", "back-of-card");
+
+  //   card.appendChild(back);
+
+  //   debugger;
 
   //   for (let i = 0; i < frontData.length; i++) {
   //     let li = document.createElement("li");
@@ -55,12 +73,4 @@ export const cardFiller = function (book) {
   //     // const front = document.getElementById("front-of-card");
   //     newCard.appendChild(li);
   //   }
-
-  frontData.forEach((category) => {
-    let li = document.createElement("li");
-    li.textContent = book[category];
-    // debugger;
-    const front = document.getElementById("front-of-card");
-    front.appendChild(li);
-  });
 };

@@ -5,18 +5,18 @@ class Card {
     const card = document.createElement("div");
     card.setAttribute("class", "card");
 
-    const front = document.createElement("ol");
-    front.setAttribute("id", "front-of-card");
+    // const front = document.createElement("ol");
+    // front.setAttribute("id", "front-of-card");
 
-    const back = document.createElement("ol");
-    back.setAttribute("id", "back-of-card");
+    // const back = document.createElement("ol");
+    // back.setAttribute("id", "back-of-card");
 
     const cardHolder = document.getElementById("card-holder");
 
     cardHolder.appendChild(card);
 
-    card.appendChild(front);
-    card.appendChild(back);
+    // card.appendChild(front);
+    // card.appendChild(back);
   }
 }
 
