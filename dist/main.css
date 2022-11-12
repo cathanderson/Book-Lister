@@ -136,6 +136,32 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+/*!***************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/card.css ***!
+  \***************************************************************************************************/
+#list-title {
+    display: block;
+}
+
+section {
+    width: 1500px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.card {
+    border: 3px solid;
+    margin: 30px;
+    padding: 30px;
+    width: 250px;
+}
+
+img {
+    height: 350px;
+    width: auto;
+
+}
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/

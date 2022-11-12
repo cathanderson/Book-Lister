@@ -1,0 +1,23 @@
+#list-title {
+    display: block;
+}
+
+section {
+    width: 1500px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.card {
+    border: 3px solid;
+    margin: 30px;
+    padding: 30px;
+    width: 250px;
+}
+
+img {
+    height: 350px;
+    width: auto;
+
+}
