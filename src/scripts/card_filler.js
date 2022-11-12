@@ -1,5 +1,3 @@
-import Card from "./card";
-
 // NYT request root URL: https://api.nytimes.com/svc/books/v3
 // NYT Books API Key: "P8pcb2dgnGF9YiOs6vGO2ATSlJvDl78Z"
 // To get all lists: https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=P8pcb2dgnGF9YiOs6vGO2ATSlJvDl78Z
@@ -99,7 +97,7 @@ export const cardFiller = function (book, i) {
 
   // MAKING FRONT OF CARD
 
-  let front = document.createElement("ol");
+  let front = document.createElement("ul");
   front.setAttribute("class", "front-of-card");
 
   frontData.forEach((category) => {
@@ -124,7 +122,7 @@ export const cardFiller = function (book, i) {
 
   // MAKING BACK OF CARD
 
-  let back = document.createElement("ol");
+  let back = document.createElement("ul");
   back.setAttribute("class", "back-of-card");
 
   backData.forEach((category) => {
@@ -139,7 +137,7 @@ export const cardFiller = function (book, i) {
         a.textContent = "Purchase from an independent bookstore with IndieBound";
       } else {
         a.setAttribute("href", book[category]);
-        a.textContent = "Purchase from Amazon";
+        a.textContent = "...Or purchase from Amazon :/";
       }
       li.appendChild(a);
     }
