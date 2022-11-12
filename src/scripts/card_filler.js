@@ -103,22 +103,21 @@ export const cardFiller = function (book, i) {
   front.setAttribute("class", "front-of-card");
 
   frontData.forEach((category) => {
+    let li = document.createElement("li");
+    li.setAttribute("class", category);
     if (category === "book_image") {
       let img = document.createElement("img");
-      img.setAttribute("class", category);
       img.setAttribute("src", book["book_image"]);
-      img.setAttribute("alt", `cover image for ${titleize(book["title"])}`);
-      front.appendChild(img);
+      img.setAttribute("alt", `Cover image for ${titleize(book["title"])}`);
+      li.appendChild(img);
     } else {
-      let li = document.createElement("li");
-      li.setAttribute("class", category);
       if (category === "title") {
         li.textContent = titleize(book["title"]);
       } else {
         li.textContent = book[category];
       }
-      front.appendChild(li);
     }
+    front.appendChild(li);
   });
 
   card.appendChild(front);
@@ -129,28 +128,22 @@ export const cardFiller = function (book, i) {
   back.setAttribute("class", "back-of-card");
 
   backData.forEach((category) => {
+    let li = document.createElement("li");
+    li.setAttribute("class", category);
     if (category === "description") {
-      let li = document.createElement("li");
-      li.setAttribute("class", category);
       li.textContent = book[category];
-      back.appendChild(li);
-    } else if (category === "buy_links[5].url") {
-      let li = document.createElement("li");
-      li.setAttribute("class", category);
+    } else {
       let a = document.createElement("a");
-      a.setAttribute("href", book.buy_links[5].url);
-      a.textContent = "Purchase from an indie bookstore with IndieBound";
-      back.appendChild(li);
-      li.appendChild(a);
-    } else if (category === "amazon_product_url") {
-      let li = document.createElement("li");
-      li.setAttribute("class", category);
-      let a = document.createElement("a");
-      a.setAttribute("href", book[category]);
-      a.textContent = "Purchase from Amazon";
-      back.appendChild(li);
+      if (category === "buy_links[5].url") {
+        a.setAttribute("href", book.buy_links[5].url);
+        a.textContent = "Purchase from an independent bookstore with IndieBound";
+      } else {
+        a.setAttribute("href", book[category]);
+        a.textContent = "Purchase from Amazon";
+      }
       li.appendChild(a);
     }
+    back.appendChild(li);
   });
 
   card.appendChild(back);
