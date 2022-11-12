@@ -45,32 +45,39 @@ export const cardFiller = function (book) {
   const frontData = ["book_image", "title", "author", "rank", "weeks_on_list"];
   const backData = ["description", "buy_links[5].url", "book_review_link"];
 
-  let newCard = new Card();
+  const card = document.createElement("div");
+  card.setAttribute("class", "card");
 
-//   let front = document.createElement("ol");
-//   front.setAttribute("id", "front-of-card");
+  const cardHolder = document.getElementById("card-holder");
 
-//   frontData.forEach((category) => {
-//     let li = document.createElement("li");
-//     li.textContent = book[category];
-//     // debugger;
-//     front.appendChild(li);
-//   });
+  cardHolder.appendChild(card);
 
-//   newCard.appendChild(front);
+  let front = document.createElement("ol");
+  front.setAttribute("id", "front-of-card");
 
-  //   const back = document.createElement("ol");
-  //   back.setAttribute("id", "back-of-card");
+  frontData.forEach((category) => {
+    let li = document.createElement("li");
+    li.textContent = book[category];
+    front.appendChild(li);
+  });
 
-  //   card.appendChild(back);
+  card.appendChild(front);
 
-  //   debugger;
+  let back = document.createElement("ol");
+  back.setAttribute("id", "back-of-card");
 
-  //   for (let i = 0; i < frontData.length; i++) {
-  //     let li = document.createElement("li");
-  //     li.textContent = book[frontData[i]];
-  //     debugger;
-  //     // const front = document.getElementById("front-of-card");
-  //     newCard.appendChild(li);
-  //   }
+  backData.forEach((category) => {
+    // let li = document.createElement("li");
+    if (category === "buy_links[5].url") {
+      let li = document.createElement("li");
+      li.textContent = book.buy_links[5].url.toString();
+      back.appendChild(li);
+    } else {
+      let li = document.createElement("li");
+      li.textContent = book[category];
+      back.appendChild(li);
+    }
+  });
+
+  card.appendChild(back);
 };
