@@ -224,8 +224,9 @@ aside {
 
 aside div {
     border: 3px solid;
-    margin: 15px;
+    margin: 15px 0px;
     text-align: center;
+    padding: 15px 0px
 }
 
 .sidebar-title {
