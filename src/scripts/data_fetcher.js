@@ -42,7 +42,7 @@ export const dataFetcher = async function () {
         const cardHolder = document.getElementById("card-holder");
         cardHolder.appendChild(card);
 
-        // CARD FLIPPER
+        // CARD FLIPPER 
         card.addEventListener("click", (e) => {
           card.classList.toggle("is-flipped");
         });

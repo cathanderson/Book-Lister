@@ -136,25 +136,28 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-/*!***************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/card.css ***!
-  \***************************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/cards.css ***!
+  \****************************************************************************************************/
 #list-title {
-    display: block;
+    display: flex;
+    justify-content: center;
+    font-size: 26;
+}
+
+main {
+    width: 1200px;
 }
 
 section {
-    width: 1200px;
     display: flex;
     flex-flow: wrap;
     justify-content: center;
-    /* transform: translate(-50%, -50%); */
 }
 
 .card {
     border: 3px solid;
     margin: 30px;
-    /* padding: 30px; */
     width: 300px;
     height: 550px;
     transform-style: preserve-3d;
@@ -190,11 +193,19 @@ section {
 img {
     height: 350px;
     width: auto;
-    /* align-items: center; */
 }
 
 
 
+/*!*****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/header.css ***!
+  \*****************************************************************************************************/
+#app-title {
+    display: flex;
+    justify-content: center;
+    font-size: 32;
+    padding: 20px 0px 20px 0px;
+}
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
