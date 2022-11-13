@@ -41,6 +41,11 @@ export const dataFetcher = async function () {
         // APPENDING CARD TO MAIN SECTION
         const cardHolder = document.getElementById("card-holder");
         cardHolder.appendChild(card);
+
+        // CARD FLIPPER
+        card.addEventListener("click", (e) => {
+          card.classList.toggle("is-flipped");
+        });
       }
       data.results.books.forEach((book, i) => {
         allCardFiller.cardFiller(book, i);

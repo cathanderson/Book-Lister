@@ -18,6 +18,11 @@ section {
     height: 550px;
     transform-style: preserve-3d;
     transition: all 1s ease;
+    cursor: pointer;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
 }
 
 .front-of-card {
@@ -47,7 +52,4 @@ img {
     /* align-items: center; */
 }
 
-.flipCard {
-    transform: rotateY(180deg);
-}
 
