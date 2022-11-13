@@ -5,8 +5,7 @@
 }
 
 main {
-    width: 1100px;
-    /* float: left; */
+    width: 1050px;
 }
 
 section {
@@ -55,7 +54,6 @@ img {
     height: 290px;
     padding: 0;
     width: auto;
-    /* margin: 12px 0 10px; */
 }
 
 

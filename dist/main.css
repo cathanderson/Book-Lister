@@ -146,8 +146,7 @@ table {
 }
 
 main {
-    width: 1100px;
-    /* float: left; */
+    width: 1050px;
 }
 
 section {
@@ -196,7 +195,6 @@ img {
     height: 290px;
     padding: 0;
     width: auto;
-    /* margin: 12px 0 10px; */
 }
 
 
@@ -216,13 +214,9 @@ img {
 aside {
     height: 100%;
     width: 330px;
-    /* position: relative;
-    position: fixed;
-    right: 0;
-    top: 140; */
 }
 
-aside div {
+#inner-sidebar-container div {
     border: 3px solid;
     margin: 15px 0px;
     text-align: center;
@@ -248,6 +242,11 @@ button {
 
 option {
     text-align: center;
+}
+
+#inner-sidebar-container {
+    position: fixed;
+    width: 330px;
 }
 
 /*!*************************************************************************************************************!*\
