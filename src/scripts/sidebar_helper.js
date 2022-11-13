@@ -13,12 +13,19 @@ export const dropdownMaker = async function () {
       for (let i = 0; i < data.results.length; i++) {
         // MAKING OPTION
         const option = document.createElement("option");
+        option.setAttribute("class", "list-option");
         option.setAttribute("value", data.results[i].list_name_encoded);
         option.textContent = data.results[i].display_name;
 
         // APPENDING CARD TO SELECT
         const listSelector = document.getElementById("list-selector");
         listSelector.appendChild(option);
+
+        // // LIST SELECTOR LISTENER
+        // option.addEventListener("click", (e) => {
+        //   console.log('you selected a list')
+        //   // option.classList.toggle("is-selected-list");
+        // });
       }
     })
     .catch((error) => {

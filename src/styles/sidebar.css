@@ -19,6 +19,18 @@ aside div {
     margin: 8px 0 10px;
 }
 
+/* .list-option.is-selected-list {
+    color: blue;
+} */
+
 div p {
     margin: 5px;
+}
+
+button {
+    margin: 10px;
+}
+
+option {
+    text-align: center;
 }
