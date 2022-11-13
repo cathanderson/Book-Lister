@@ -21,8 +21,8 @@ import * as allCardFiller from "./card_filler";
 // buy_links[5].url (buy_links is an array of 6 vendors, choose the 5th ele for indiebound and select url from subarr )
 // book_review_link -- JK- this is almost always null, so we're skipping it
 
-export const dataFetcher = async function () {
-  const url =
+export const dataFetcher = async function () { // pass in date (plus default of current) and list (and default) params?
+  const url = // then interpolate params into here?
     "https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=P8pcb2dgnGF9YiOs6vGO2ATSlJvDl78Z";
   fetch(url)
     .then((response) => {

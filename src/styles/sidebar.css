@@ -1,6 +1,10 @@
 aside {
     height: 100%;
-    width: 250px;
+    width: 270px;
+    /* position: relative;
+    position: fixed;
+    right: 0;
+    top: 140; */
 }
 
 aside div {
