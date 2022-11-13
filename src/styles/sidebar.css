@@ -17,3 +17,7 @@ aside div {
     font-size: 22;
     margin: 8px 0 10px;
 }
+
+div p {
+    margin: 5px;
+}
