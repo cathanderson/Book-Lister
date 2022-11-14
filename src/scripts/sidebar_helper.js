@@ -1,6 +1,5 @@
 export const dropdownMaker = async function () {
-  // pass in date (plus default of current) and list (and default) params?
-  const url = // then interpolate params into here?
+  const url =
     "https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=P8pcb2dgnGF9YiOs6vGO2ATSlJvDl78Z";
   fetch(url)
     .then((response) => {
@@ -17,15 +16,9 @@ export const dropdownMaker = async function () {
         option.setAttribute("value", data.results[i].list_name_encoded);
         option.textContent = data.results[i].display_name;
 
-        // APPENDING CARD TO SELECT
+        // APPENDING OPTION TO SELECT
         const listSelector = document.getElementById("list-selector");
         listSelector.appendChild(option);
-
-        // // LIST SELECTOR LISTENER
-        // option.addEventListener("click", (e) => {
-        //   console.log('you selected a list')
-        //   // option.classList.toggle("is-selected-list");
-        // });
       }
     })
     .catch((error) => {
@@ -33,10 +26,8 @@ export const dropdownMaker = async function () {
     });
 };
 
-
 // function to set default date as today on date form
 
 export const defaultDateSetter = async function () {
   document.getElementById("date-picker").valueAsDate = new Date();
-
-}
+};
