@@ -62,6 +62,8 @@ export const cardFiller = function (book, i) {
     } else {
       if (category === "title") {
         li.textContent = titleize(book["title"]);
+      } else if (category === "rank") {
+        li.textContent = "# " + book[category];
       } else {
         li.textContent = book[category];
       }

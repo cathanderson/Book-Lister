@@ -142,7 +142,7 @@ table {
   font-size: 24;
   font-style: italic;
   font-family: "Montserrat", sans-serif;
-  font-weight: 350;
+  font-weight: 375;
 }
 
 main {
@@ -157,6 +157,7 @@ section {
 }
 
 .card {
+  position: relative;
   border-radius: 25px;
   margin: 20px;
   width: 270px;
@@ -208,6 +209,35 @@ a {
   color: #3a3d26;
 }
 
+.title {
+  font-size: 21;
+  font-weight: 500;
+  padding-top: 18;
+}
+
+.author {
+  padding-top: 10px;
+  font-weight: 400;
+  font-size: 17;
+}
+
+.weeks_on_list {
+  position: absolute;
+  bottom: 52;
+  font-size: 24;
+  right: 70;
+  font-weight: 400;
+}
+
+.rank {
+  position: absolute;
+  bottom: 52;
+  left: 62;
+  font-size: 24;
+  font-style: italic;
+  font-weight: 400;
+}
+
 #app-title {
   display: flex;
   justify-content: center;
@@ -244,7 +274,7 @@ div p {
   margin: 5px;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
-  font-size: 15;
+  font-size: 16;
 }
 
 button {
