@@ -10,15 +10,22 @@ export const dropdownMaker = async function () {
     })
     .then((data) => {
       for (let i = 0; i < data.results.length; i++) {
-        // MAKING OPTION
-        const option = document.createElement("option");
-        option.setAttribute("class", "list-option");
-        option.setAttribute("value", data.results[i].list_name_encoded);
-        option.textContent = data.results[i].display_name;
+        
+        // ONLY INCLUDE BOOK AS AN OPTION IF IT WAS PUBLISHED THIS YEAR
+        let newestPublishedDate = data.results[i].newest_published_date;
+        let newestPublishedYear = parseInt(newestPublishedDate.slice(0, 4));
 
-        // APPENDING OPTION TO SELECT
-        const listSelector = document.getElementById("list-selector");
-        listSelector.appendChild(option);
+        if (newestPublishedYear >= 2022) {
+          // MAKING OPTION
+          const option = document.createElement("option");
+          option.setAttribute("class", "list-option");
+          option.setAttribute("value", data.results[i].list_name_encoded);
+          option.textContent = data.results[i].display_name;
+
+          // APPENDING OPTION TO SELECT
+          const listSelector = document.getElementById("list-selector");
+          listSelector.appendChild(option);
+        }
       }
     })
     .catch((error) => {
