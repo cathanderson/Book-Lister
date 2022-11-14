@@ -1,11 +1,10 @@
-/*!****************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/reset.css ***!
-  \****************************************************************************************************/
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html,
 body,
 div,
@@ -87,12 +86,12 @@ time,
 mark,
 audio,
 video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -107,164 +106,151 @@ hgroup,
 menu,
 nav,
 section {
-    display: block;
+  display: block;
 }
 
 body {
-    line-height: 1;
+  line-height: 1;
 }
 
 ol,
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-    quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
-    content: none;
+  content: "";
+  content: none;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-/*!****************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/cards.css ***!
-  \****************************************************************************************************/
+
 #list-title {
-    display: flex;
-    justify-content: center;
-    font-size: 22;
-    font-style: italic;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 350;
+  display: flex;
+  justify-content: center;
+  font-size: 22;
+  font-style: italic;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 350;
 }
 
 main {
-    width: 980px;
+  width: 980px;
 }
 
 section {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
 }
 
 .card {
-    border: 3px solid;
-    margin: 20px;
-    width: 270px;
-    height: 500px;
-    transform-style: preserve-3d;
-    transition: all 1s ease;
-    cursor: pointer;
-    text-align: center;
+  border: 3px solid;
+  margin: 20px;
+  width: 270px;
+  height: 500px;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  cursor: pointer;
+  text-align: center;
 }
 
 .card.is-flipped {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .front-of-card {
-    position: absolute;
-    margin: 0px;
-    padding: 30px;
-    width: 210px;
-    height: 440px;
-    backface-visibility: hidden;
-    background: rgb(224, 253, 200);
+  position: absolute;
+  margin: 0px;
+  padding: 30px;
+  width: 210px;
+  height: 440px;
+  backface-visibility: hidden;
+  background: rgb(224, 253, 200);
 }
 
 .back-of-card {
-    position: absolute;
-    margin: 0px;
-    padding: 30px;
-    width: 210px;
-    height: 440px;
-    backface-visibility: hidden;
-    background: #fefeb2;
-    transform: rotateY(180deg);
+  position: absolute;
+  margin: 0px;
+  padding: 30px;
+  width: 210px;
+  height: 440px;
+  backface-visibility: hidden;
+  background: #fefeb2;
+  transform: rotateY(180deg);
 }
 
 img {
-    width: 190px;
-    padding: 0;
-    height: auto;
+  width: 190px;
+  padding: 0;
+  height: auto;
 }
 
-
-
-/*!*****************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/header.css ***!
-  \*****************************************************************************************************/
 #app-title {
-    display: flex;
-    justify-content: center;
-    font-size: 60;
-    padding: 20px 0px 20px 0px;
-    font-family: 'Italiana', serif;
-    font-weight: 400;
+  display: flex;
+  justify-content: center;
+  font-size: 60;
+  padding: 20px 0px 20px 0px;
+  font-family: "Italiana", serif;
+  font-weight: 400;
+  color: #743c2f;
 }
-/*!******************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/sidebar.css ***!
-  \******************************************************************************************************/
+
 aside {
-    height: 100%;
-    width: 300px;
+  height: 100%;
+  width: 300px;
 }
 
 #inner-sidebar-container div {
-    border: 3px solid;
-    margin: 15px 0px;
-    text-align: center;
-    padding: 15px 0px
+  border: 3px solid;
+  margin: 15px 0px;
+  text-align: center;
+  padding: 15px 0px;
 }
 
 .sidebar-title {
-    font-size: 22;
-    margin: 8px 0 10px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+  font-size: 22;
+  margin: 8px 0 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 div p {
-    margin: 5px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 15;
+  margin: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 15;
 }
 
 button {
-    margin: 10px;
+  margin: 10px;
 }
 
 option {
-    text-align: center;
+  text-align: center;
 }
 
 #inner-sidebar-container {
-    position: fixed;
-    width: 300px;
+  position: fixed;
+  width: 300px;
 }
 
-/*!*************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/everything_but.css ***!
-  \*************************************************************************************************************/
 #everything-but-app-title {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
-/*!*************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
-  \*************************************************************************************************************************************/
+
 * {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;

@@ -1,8 +1,16 @@
-@import "./styles/reset.css";
-@import "./styles/cards.css";
-@import "./styles/header.css";
-@import "./styles/sidebar.css";
-@import "./styles/everything_but.css";
+@import "./styles/variables";
+@import "./styles/reset.scss";
+@import "./styles/cards.scss";
+@import "./styles/header.scss";
+@import "./styles/sidebar.scss";
+@import "./styles/everything_but.scss";
+
+// $olive: #A69A71;
+// $soft-white: #F5F4F3;
+// $lightest-blush: #f9c1ad;
+// $light-blush: #f9c1ad;
+// $medium-blush: #d08974;
+// $mocha: #764337;
 
 * {
 font-family: 'Montserrat', sans-serif;
