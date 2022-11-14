@@ -172,6 +172,7 @@ section {
 }
 
 .front-of-card {
+  box-shadow: 2.5px 2.5px 2.5px #aa7160;
   position: absolute;
   border-radius: 25px;
   margin: 0px;
@@ -183,6 +184,7 @@ section {
 }
 
 .back-of-card {
+  box-shadow: 2.5px 2.5px 2.5px #949c71;
   position: absolute;
   border-radius: 25px;
   margin: 0px;
@@ -222,6 +224,7 @@ aside {
 }
 
 #inner-sidebar-container div {
+  box-shadow: 1.5px 1.5px 1.5px #949c71;
   border-radius: 15px;
   margin: 15px 0px;
   text-align: center;
