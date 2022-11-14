@@ -1,7 +1,10 @@
 #list-title {
     display: flex;
     justify-content: center;
-    font-size: 26;
+    font-size: 22;
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 350;
 }
 
 main {

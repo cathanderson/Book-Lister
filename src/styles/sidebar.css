@@ -1,6 +1,6 @@
 aside {
     height: 100%;
-    width: 330px;
+    width: 300px;
 }
 
 #inner-sidebar-container div {
@@ -13,14 +13,15 @@ aside {
 .sidebar-title {
     font-size: 22;
     margin: 8px 0 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
-
-/* .list-option.is-selected-list {
-    color: blue;
-} */
 
 div p {
     margin: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15;
 }
 
 button {
@@ -33,5 +34,5 @@ option {
 
 #inner-sidebar-container {
     position: fixed;
-    width: 330px;
+    width: 300px;
 }
