@@ -147,6 +147,7 @@ table {
 
 main {
   width: 980px;
+  color: #502317;
 }
 
 section {
@@ -156,7 +157,7 @@ section {
 }
 
 .card {
-  border: 3px solid;
+  border-radius: 25px;
   margin: 20px;
   width: 270px;
   height: 500px;
@@ -172,22 +173,24 @@ section {
 
 .front-of-card {
   position: absolute;
+  border-radius: 25px;
   margin: 0px;
   padding: 30px;
   width: 210px;
   height: 440px;
   backface-visibility: hidden;
-  background: rgb(224, 253, 200);
+  background: #d08974;
 }
 
 .back-of-card {
   position: absolute;
+  border-radius: 25px;
   margin: 0px;
   padding: 30px;
   width: 210px;
   height: 440px;
   backface-visibility: hidden;
-  background: #fefeb2;
+  background: #c7d09e;
   transform: rotateY(180deg);
 }
 
@@ -195,6 +198,7 @@ img {
   width: 190px;
   padding: 0;
   height: auto;
+  border-radius: 8px;
 }
 
 #app-title {
@@ -204,7 +208,7 @@ img {
   padding: 20px 0px 20px 0px;
   font-family: "Italiana", serif;
   font-weight: 400;
-  color: #743c2f;
+  color: #502317;
 }
 
 aside {
@@ -254,4 +258,8 @@ option {
 * {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
+}
+
+body {
+  background-color: rgba(208, 138, 116, 0.631372549);
 }

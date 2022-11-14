@@ -9,6 +9,7 @@
 
 main {
     width: 980px;
+    color: $mocha;
 }
 
 section {
@@ -18,7 +19,8 @@ section {
 }
 
 .card {
-    border: 3px solid;
+    // border: 3px solid;
+    border-radius: 25px;
     margin: 20px;
     width: 270px;
     height: 500px;
@@ -34,22 +36,24 @@ section {
 
 .front-of-card {
     position: absolute;
+    border-radius: 25px;
     margin: 0px;
     padding: 30px;
     width: 210px;
     height: 440px;
     backface-visibility: hidden;
-    background: rgb(224, 253, 200);
+    background: $medium-blush;
 }
 
 .back-of-card {
     position: absolute;
+    border-radius: 25px;
     margin: 0px;
     padding: 30px;
     width: 210px;
     height: 440px;
     backface-visibility: hidden;
-    background: #fefeb2;
+    background: $light-olive;
     transform: rotateY(180deg);
 }
 
@@ -57,6 +61,7 @@ img {
     width: 190px;
     padding: 0;
     height: auto;
+    border-radius: 8px;
 }
 
 
