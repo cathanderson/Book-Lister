@@ -146,7 +146,7 @@ table {
 }
 
 main {
-    width: 1050px;
+    width: 980px;
 }
 
 section {
@@ -157,7 +157,7 @@ section {
 
 .card {
     border: 3px solid;
-    margin: 30px;
+    margin: 20px;
     width: 270px;
     height: 500px;
     transform-style: preserve-3d;
@@ -192,9 +192,9 @@ section {
 }
 
 img {
-    height: 290px;
+    width: 190px;
     padding: 0;
-    width: auto;
+    height: auto;
 }
 
 

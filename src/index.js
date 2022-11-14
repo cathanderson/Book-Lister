@@ -12,5 +12,6 @@ searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
   let selectedList = e.target.elements[0].value;
   let selectedDate = e.target.elements[1].value;
+//   console.log(e.target.elements[0].innerText);
   allDataFetcher.dataFetcher(selectedList, selectedDate);
 });

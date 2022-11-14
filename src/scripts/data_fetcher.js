@@ -54,29 +54,11 @@ export const dataFetcher = async function (date, list) {
       });
 
       const cardHolder = document.getElementById("card-holder");
-      // console.log(cardHolder.children);
-      for (let i = 0; i < cardHolder.children.length; i++) {
-        // console.log(cardHolder.children[i].children.length);
-        if (cardHolder.children[i].children.length === 0) {
-          cardHolder.removeChild(cardHolder.children[i]);
-        }
-      }
-      for (let i = 0; i < cardHolder.children.length; i++) {
-        // console.log(cardHolder.children[i].children.length);
-        if (cardHolder.children[i].children.length === 0) {
-          cardHolder.removeChild(cardHolder.children[i]);
-        }
-      }
-      for (let i = 0; i < cardHolder.children.length; i++) {
-        // console.log(cardHolder.children[i].children.length);
-        if (cardHolder.children[i].children.length === 0) {
-          cardHolder.removeChild(cardHolder.children[i]);
-        }
-      }
-      for (let i = 0; i < cardHolder.children.length; i++) {
-        // console.log(cardHolder.children[i].children.length);
-        if (cardHolder.children[i].children.length === 0) {
-          cardHolder.removeChild(cardHolder.children[i]);
+      for (let times = 0; times < 5; times++) {
+        for (let i = 0; i < cardHolder.children.length; i++) {
+          if (cardHolder.children[i].children.length === 0) {
+            cardHolder.removeChild(cardHolder.children[i]);
+          }
         }
       }
     })
