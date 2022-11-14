@@ -4,10 +4,13 @@ aside {
 }
 
 #inner-sidebar-container div {
-    border: 3px solid;
+    border-radius: 15px;
+    // border: 3px solid;
     margin: 15px 0px;
     text-align: center;
-    padding: 15px 0px
+    padding: 15px 0px;
+    background-color: $light-olive;
+    color: $dark-olive;
 }
 
 .sidebar-title {

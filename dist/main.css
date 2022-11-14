@@ -139,7 +139,7 @@ table {
 #list-title {
   display: flex;
   justify-content: center;
-  font-size: 22;
+  font-size: 24;
   font-style: italic;
   font-family: "Montserrat", sans-serif;
   font-weight: 350;
@@ -190,7 +190,8 @@ section {
   width: 210px;
   height: 440px;
   backface-visibility: hidden;
-  background: #c7d09e;
+  background: #d1dba7;
+  color: #3a3d26;
   transform: rotateY(180deg);
 }
 
@@ -201,10 +202,14 @@ img {
   border-radius: 8px;
 }
 
+a {
+  color: #3a3d26;
+}
+
 #app-title {
   display: flex;
   justify-content: center;
-  font-size: 60;
+  font-size: 66;
   padding: 20px 0px 20px 0px;
   font-family: "Italiana", serif;
   font-weight: 400;
@@ -217,10 +222,12 @@ aside {
 }
 
 #inner-sidebar-container div {
-  border: 3px solid;
+  border-radius: 15px;
   margin: 15px 0px;
   text-align: center;
   padding: 15px 0px;
+  background-color: #d1dba7;
+  color: #3a3d26;
 }
 
 .sidebar-title {

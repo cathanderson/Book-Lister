@@ -1,7 +1,7 @@
 #list-title {
     display: flex;
     justify-content: center;
-    font-size: 22;
+    font-size: 24;
     font-style: italic;
     font-family: 'Montserrat', sans-serif;
     font-weight: 350;
@@ -54,6 +54,7 @@ section {
     height: 440px;
     backface-visibility: hidden;
     background: $light-olive;
+    color: $dark-olive;
     transform: rotateY(180deg);
 }
 
@@ -62,6 +63,10 @@ img {
     padding: 0;
     height: auto;
     border-radius: 8px;
+}
+
+a {
+    color: $dark-olive;
 }
 
 
