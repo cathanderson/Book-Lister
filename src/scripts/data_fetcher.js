@@ -34,6 +34,10 @@ export const dataFetcher = async function (date, list) {
       return response.json();
     })
     .then((data) => {
+      //RESETTING LIST TITLE HEADER
+      const listTitle = document.getElementById("list-title");
+      listTitle.textContent = `${data.results.list_name} Best Sellers`;
+
       for (let i = 0; i < data.results.books.length; i++) {
         // MAKING CARD
         const card = document.createElement("div");
