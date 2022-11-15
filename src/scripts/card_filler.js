@@ -72,67 +72,6 @@ export const cardFiller = function (book, i) {
       li.textContent = (book.author);
       front.appendChild(li);
     } 
-    // else {
-    //   if (category === "rank") {
-    //     let li = document.createElement("li");
-    //     li.setAttribute("class", "rank-week");
-
-    //     let rankDiv = document.createElement("div");
-    //     rankDiv.textContent = "# " + book[category];
-
-    //     let rankP = document.createElement("p");
-    //     rankP.innerHTML = "Rank";
-
-    //     front.appendChild(li);
-    //     li.appendChild(rankDiv);
-    //     rankDiv.appendChild(rankP);
-    //   } else if (category === "weeks_on_list") {
-    //     let li = document.createElement("li");
-    //     li.setAttribute("class", "rank-week");
-        
-    //     let weeksDiv = document.createElement("div");
-    //     weeksDiv.textContent = book[category];
-
-    //     let weeksP = document.createElement("p");
-    //     if (book["weeks_on_list"] === 1) {
-    //       weeksP.innerHTML = "Week on list";
-    //     } else {
-    //       weeksP.innerHTML = "Weeks on list";
-    //     }
-
-    //     front.appendChild(li);
-    //     li.append(weeksDiv);
-    //     weeksDiv.appendChild(weeksP);
-    //   }
-    // }
-
-    // } else if (category === "rank") {
-    // let rankweekDiv = document.createElement("div")
-    // li.classList.add("rank-week");
-    // let rankDiv = document.createElement("div");
-    // let rankP = document.createElement("p");
-    // rankP.innerHTML = "Rank";
-    // rankDiv.textContent = "# " + book[category];
-    // li.textContent = book[category];
-    // rankDiv.appendChild(rankP);
-    // li.appendChild(rankDiv);
-    // } else if (category === "weeks_on_list") {
-    // li = document.querySelector(".rank-week");
-    // let weeksDiv = document.createElement("div");
-    // let weeksP = document.createElement("p");
-    // if (book["weeks_on_list"] === 1) {
-    //   weeksP.innerHTML = "Week on list";
-    // } else {
-    //   weeksP.innerHTML = "Weeks on list";
-    // }
-    // weeksDiv.textContent = book[category];
-    // weeksDiv.appendChild(weeksP);
-    // li.append(weeksDiv);
-    // } else {
-    //   li.textContent = book[category];
-    //   }
-    // }
-    // front.appendChild(li);
   });
   
   let frontSubDiv = document.createElement("div");
@@ -140,8 +79,6 @@ export const cardFiller = function (book, i) {
 
   frontSubData.forEach((category) => {
     if (category === "rank") {
-      // let li = document.createElement("li");
-      // li.setAttribute("class", "rank-week");
       let rankLi = document.createElement("li");
       rankLi.setAttribute("class", "rank");
       rankLi.textContent = "# " + book[category];
@@ -151,8 +88,6 @@ export const cardFiller = function (book, i) {
       frontSubDiv.appendChild(rankLi);
       rankLi.appendChild(rankP);
     } else if (category === "weeks_on_list") {
-      // let li = document.createElement("li");
-      // li.setAttribute("class", "rank-week");
       let weeksLi = document.createElement("li");
       weeksLi.setAttribute("class", "weeks_on_list");
       weeksLi.textContent = book[category];
@@ -175,12 +110,16 @@ export const cardFiller = function (book, i) {
   let back = document.createElement("ul");
   back.setAttribute("class", "back-of-card");
 
+  let backSubDiv = document.createElement("div");
+  backSubDiv.setAttribute("class", "back-buttons-div");
+
   backData.forEach((category) => {
     let li = document.createElement("li");
     // li.setAttribute("class", category);
     if (category === "description") {
       li.setAttribute("class", category);
       li.textContent = book[category];
+      back.appendChild(li);
     } else {
       let a = document.createElement("a");
       let button = document.createElement("button");
@@ -194,10 +133,12 @@ export const cardFiller = function (book, i) {
         a.setAttribute("href", book[category]);
         button.textContent = "...Or purchase from Amazon :/";
       }
-      a.appendChild(button);
+      
+      backSubDiv.appendChild(li);
       li.appendChild(a);
+      a.appendChild(button);
     }
-    back.appendChild(li);
+    back.appendChild(backSubDiv);
   });
 
   card.appendChild(back);
