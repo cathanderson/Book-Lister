@@ -187,6 +187,8 @@ section {
 .back-of-card {
   box-shadow: 2.5px 2.5px 2.5px #949c71;
   position: absolute;
+  display: flex;
+  flex-flow: column;
   border-radius: 25px;
   margin: 0px;
   padding: 30px;
@@ -253,21 +255,9 @@ a {
 }
 
 .description {
-  position: relative;
-  top: 30;
   font-weight: 400;
   font-size: 18;
   line-height: 1.25;
-}
-
-.indie_bound_link {
-  position: relative;
-  bottom: -138;
-}
-
-.amazon_product_url {
-  position: relative;
-  bottom: -130;
 }
 
 #app-title {
