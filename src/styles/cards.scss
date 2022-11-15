@@ -64,13 +64,18 @@ section {
     transform: rotateY(180deg);
 }
 
+.top-front-div {
+    margin-top: auto;
+}
+
 img {
     // width: 190px;
     width: auto;
     min-width: 170px;
+    max-width: 205px;
     padding: 0;
     height: auto;
-    max-height: 264;
+    max-height: 270px;
     border-radius: 8px;
 }
 
@@ -81,7 +86,7 @@ a {
 .title {
     font-size: 21;
     font-weight: 500;
-    padding-top: 14;
+    padding-top: 18;
 }
 
 .author {
@@ -101,6 +106,7 @@ a {
     // position: absolute;
     // bottom: 18;
     // right: 54;
+    padding-top: 5;
     font-size: 24;
     font-weight: 400;
 }

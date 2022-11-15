@@ -52,6 +52,9 @@ export const cardFiller = function (book, i) {
   let front = document.createElement("ul");
   front.setAttribute("class", "front-of-card");
 
+  let firstFrontSubDiv = document.createElement("div");
+  firstFrontSubDiv.setAttribute("class", "top-front-div");
+
   frontData.forEach((category) => {
     if (category === "book_image") {
       let li = document.createElement("li");
@@ -60,17 +63,20 @@ export const cardFiller = function (book, i) {
       img.setAttribute("src", book["book_image"]);
       img.setAttribute("alt", `Cover image for ${titleize(book["title"])}`);
       li.appendChild(img);
-      front.appendChild(li);
+      firstFrontSubDiv.appendChild(li);
+      front.appendChild(firstFrontSubDiv);
     } else if (category === "title") {
       let li = document.createElement("li");
       li.setAttribute("class", "title");
       li.textContent = titleize(book["title"]);
-      front.appendChild(li);
+      firstFrontSubDiv.appendChild(li);
+      front.appendChild(firstFrontSubDiv);
     } else if (category === "author") {
       let li = document.createElement("li");
       li.setAttribute("class", "author");
       li.textContent = (book.author);
-      front.appendChild(li);
+      firstFrontSubDiv.appendChild(li);
+      front.appendChild(firstFrontSubDiv);
     } 
   });
   
