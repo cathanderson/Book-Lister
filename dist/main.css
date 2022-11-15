@@ -337,6 +337,23 @@ option {
   width: 300px;
 }
 
+#list-selector {
+  background-color: #b1bb8d;
+  font-size: 14.5;
+  font-weight: 500;
+  color: #F5F4F3;
+  border-color: #b1bb8d;
+}
+
+#date-picker {
+  background-color: #b1bb8d;
+  font-weight: 500;
+  font-size: 14.5;
+  color: #F5F4F3;
+  border-color: #b1bb8d;
+  border-style: solid;
+}
+
 #everything-but-app-title {
   display: flex;
   justify-content: center;
