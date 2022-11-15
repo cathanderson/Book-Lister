@@ -252,6 +252,11 @@ a {
   font-weight: 400;
 }
 
+.description {
+  font-weight: 400;
+  font-size: 18;
+}
+
 #app-title {
   display: flex;
   justify-content: center;

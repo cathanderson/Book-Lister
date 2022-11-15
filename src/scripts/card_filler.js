@@ -98,14 +98,16 @@ export const cardFiller = function (book, i) {
       li.textContent = book[category];
     } else {
       let a = document.createElement("a");
+      let button = document.createElement("button");
       if (category === "buy_links[5].url") {
         a.setAttribute("href", book.buy_links[5].url);
-        a.textContent =
+        button.textContent =
           "Purchase from an independent bookstore with IndieBound";
       } else {
         a.setAttribute("href", book[category]);
-        a.textContent = "...Or purchase from Amazon :/";
+        button.textContent = "...Or purchase from Amazon :/";
       }
+      a.appendChild(button);
       li.appendChild(a);
     }
     back.appendChild(li);
