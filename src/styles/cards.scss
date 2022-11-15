@@ -36,6 +36,7 @@ section {
 
 .front-of-card {
     box-shadow: 2.5px 2.5px 2.5px #aa7160;
+    // display: flex;
     position: absolute;
     border-radius: 25px;
     margin: 0px;
@@ -85,36 +86,42 @@ a {
     font-size: 17;
 }
 
-// .weeks_on_list {
-//     position: absolute;
-//     bottom: 18;
-//     font-size: 24;
-//     right: 54;
-//     font-weight: 400;
-// }
+.rank-week-div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 18px;
+}
 
-// .rank {
-//     position: absolute;
-//     bottom: 26;
-//     left: 52;
-//     font-size: 24;
-//     font-weight: 400;
-// }
+.weeks_on_list {
+    // position: absolute;
+    // bottom: 18;
+    // right: 54;
+    font-size: 24;
+    font-weight: 400;
+}
 
-// .weeks_on_list > p {
-//     font-style: italic;
-//     font-size: 13;
-//     width: 50;
-//     font-weight: 400;
-// }
+.rank {
+    // position: absolute;
+    // bottom: 26;
+    // left: 52;
+    font-size: 24;
+    font-weight: 400;
+}
 
-// .rank > p {
-//     padding-top: 4;
-//     font-style: italic;
-//     font-size: 13;
-//     width: 50;
-//     font-weight: 400;
-// }
+.weeks_on_list > p {
+    font-style: italic;
+    font-size: 13;
+    width: 50;
+    font-weight: 400;
+}
+
+.rank > p {
+    padding-top: 4;
+    font-style: italic;
+    font-size: 13;
+    // width: 50;
+    font-weight: 400;
+}
 
 .description {
     // position: relative;

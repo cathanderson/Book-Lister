@@ -223,6 +223,36 @@ a {
   font-size: 17;
 }
 
+.rank-week-div {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 18px;
+}
+
+.weeks_on_list {
+  font-size: 24;
+  font-weight: 400;
+}
+
+.rank {
+  font-size: 24;
+  font-weight: 400;
+}
+
+.weeks_on_list > p {
+  font-style: italic;
+  font-size: 13;
+  width: 50;
+  font-weight: 400;
+}
+
+.rank > p {
+  padding-top: 4;
+  font-style: italic;
+  font-size: 13;
+  font-weight: 400;
+}
+
 .description {
   font-weight: 400;
   font-size: 18;
