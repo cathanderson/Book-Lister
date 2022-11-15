@@ -268,9 +268,16 @@ a {
   margin-top: auto;
 }
 
-a button {
+button {
   margin: 5px;
   padding: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: #d08974;
+  color: #F5F4F3;
+  border-radius: 10px;
+  border-color: rgba(188, 188, 188, 0.5803921569);
+  border-style: solid;
 }
 
 #app-title {
