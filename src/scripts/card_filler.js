@@ -131,7 +131,7 @@ export const cardFiller = function (book, i) {
       } else {
         li.setAttribute("class", category);
         a.setAttribute("href", book[category]);
-        button.textContent = "...Or purchase from Amazon :/";
+        button.textContent = "...Or purchase from Amazon";
       }
       
       backSubDiv.appendChild(li);

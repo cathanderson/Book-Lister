@@ -36,7 +36,8 @@ section {
 
 .front-of-card {
     box-shadow: 2.5px 2.5px 2.5px #aa7160;
-    // display: flex;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     border-radius: 25px;
     margin: 0px;
@@ -64,9 +65,12 @@ section {
 }
 
 img {
-    width: 190px;
+    // width: 190px;
+    width: auto;
+    min-width: 170px;
     padding: 0;
     height: auto;
+    max-height: 264;
     border-radius: 8px;
 }
 
@@ -77,7 +81,7 @@ a {
 .title {
     font-size: 21;
     font-weight: 500;
-    padding-top: 18;
+    padding-top: 14;
 }
 
 .author {
@@ -89,7 +93,7 @@ a {
 .rank-week-div {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 18px;
+    margin-top: auto;
 }
 
 .weeks_on_list {
@@ -129,6 +133,16 @@ a {
     font-weight: 400;
     font-size: 18;
     line-height: 1.25;
+    margin-top: auto;
+}
+
+.back-buttons-div {
+    margin-top: auto;
+}
+
+a button {
+    margin: 5px;
+    padding: 4px;
 }
 
 // .indie_bound_link {
