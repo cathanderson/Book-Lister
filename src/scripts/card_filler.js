@@ -66,6 +66,7 @@ export const cardFiller = function (book, i) {
         let rankP = document.createElement("p");
         rankP.innerHTML = "Rank";
         li.textContent = "# " + book[category];
+        // li.textContent = book[category];
         li.appendChild(rankP);
       } else if (category === "weeks_on_list") {
         let weeksP = document.createElement("p");

@@ -85,18 +85,32 @@ a {
 
 .weeks_on_list {
     position: absolute;
-    bottom: 52;
+    bottom: 18;
     font-size: 24;
-    right: 70;
+    right: 54;
     font-weight: 400;
 }
 
 .rank {
     position: absolute;
-    bottom: 52;
-    left: 62;
+    bottom: 26;
+    left: 52;
     font-size: 24;
+    font-weight: 400;
+}
+
+.weeks_on_list > p {
     font-style: italic;
+    font-size: 13;
+    width: 50;
+    font-weight: 400;
+}
+
+.rank > p {
+    padding-top: 4;
+    font-style: italic;
+    font-size: 13;
+    width: 50;
     font-weight: 400;
 }
 
