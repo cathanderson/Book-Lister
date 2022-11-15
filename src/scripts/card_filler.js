@@ -93,17 +93,20 @@ export const cardFiller = function (book, i) {
 
   backData.forEach((category) => {
     let li = document.createElement("li");
-    li.setAttribute("class", category);
+    // li.setAttribute("class", category);
     if (category === "description") {
+      li.setAttribute("class", category);
       li.textContent = book[category];
     } else {
       let a = document.createElement("a");
       let button = document.createElement("button");
       if (category === "buy_links[5].url") {
+        li.setAttribute("class", "indie_bound_link");
         a.setAttribute("href", book.buy_links[5].url);
         button.textContent =
           "Purchase from an independent bookstore with IndieBound";
       } else {
+        li.setAttribute("class", category);
         a.setAttribute("href", book[category]);
         button.textContent = "...Or purchase from Amazon :/";
       }

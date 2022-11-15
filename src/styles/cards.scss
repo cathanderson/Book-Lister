@@ -115,8 +115,21 @@ a {
 }
 
 .description {
+    position: relative;
+    top: 30;
     font-weight: 400;
     font-size: 18;
+    line-height: 1.25;
+}
+
+.indie_bound_link {
+    position: relative;
+    bottom: -138;
+}
+
+.amazon_product_url {
+    position: relative;
+    bottom: -130;
 }
 
 
