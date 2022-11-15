@@ -63,7 +63,19 @@ export const cardFiller = function (book, i) {
       if (category === "title") {
         li.textContent = titleize(book["title"]);
       } else if (category === "rank") {
+        let rankP = document.createElement("p");
+        rankP.innerHTML = "Rank";
         li.textContent = "# " + book[category];
+        li.appendChild(rankP);
+      } else if (category === "weeks_on_list") {
+        let weeksP = document.createElement("p");
+        if (book["weeks_on_list"] === 1) {
+          weeksP.innerHTML = "Week on list";
+        } else {
+          weeksP.innerHTML = "Weeks on list";
+        }
+        li.textContent = book[category];
+        li.appendChild(weeksP);
       } else {
         li.textContent = book[category];
       }
