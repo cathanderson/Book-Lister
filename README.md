@@ -29,7 +29,7 @@ In addition, this project will include:
 
 ### **Main Wireframe** 🖼
 
-![Wireframe image](./wireframe.png)
+![Wireframe image](./assets/wireframe.png)
 
 Above a 3x5 grid of books (each NYT best seller list includes 15 titles!) are the page’s main heading and a subheading indicating which list the site is currently displaying. The site defaults to the NYT’s default list- _Combined Print & E-Book Fiction_.
 
