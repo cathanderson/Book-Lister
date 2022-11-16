@@ -48,6 +48,10 @@ section {
     background: $medium-blush;
 }
 
+.front-of-card:hover {
+    background-color: #c4816d;
+}
+
 .back-of-card {
     box-shadow: 2.5px 2.5px 2.5px #949c71;
     position: absolute;
@@ -62,6 +66,10 @@ section {
     background: $light-olive;
     color: $dark-olive;
     transform: rotateY(180deg);
+}
+
+.back-of-card:hover {
+    background-color: #cbd4a4;
 }
 
 .top-front-div {

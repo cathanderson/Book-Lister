@@ -186,6 +186,10 @@ section {
   background: #d08974;
 }
 
+.front-of-card:hover {
+  background-color: #c4816d;
+}
+
 .back-of-card {
   box-shadow: 2.5px 2.5px 2.5px #949c71;
   position: absolute;
@@ -200,6 +204,10 @@ section {
   background: #d1dba7;
   color: #3a3d26;
   transform: rotateY(180deg);
+}
+
+.back-of-card:hover {
+  background-color: #cbd4a4;
 }
 
 .top-front-div {
