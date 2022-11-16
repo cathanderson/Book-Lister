@@ -354,6 +354,7 @@ option {
   font-weight: 500;
   color: #F5F4F3;
   border-color: #b1bb8d;
+  cursor: pointer;
 }
 
 #date-picker {
@@ -363,6 +364,7 @@ option {
   color: #F5F4F3;
   border-color: #b1bb8d;
   border-style: solid;
+  cursor: pointer;
 }
 
 #everything-but-app-title {

@@ -93,19 +93,25 @@ export const cardFiller = function (book, i) {
       front.appendChild(frontSubDiv);
       frontSubDiv.appendChild(rankLi);
       rankLi.appendChild(rankP);
-    } else if (category === "weeks_on_list") {
-      let weeksLi = document.createElement("li");
-      weeksLi.setAttribute("class", "weeks_on_list");
-      weeksLi.textContent = book[category];
-      let weeksP = document.createElement("p");
-      if (book["weeks_on_list"] === 1) {
-        weeksP.innerHTML = "Week on list";
-      } else {
-        weeksP.innerHTML = "Weeks on list";
+      if (book["weeks_on_list"] === 0) {
+        frontSubDiv.style.display = "block";
+        rankLi.style.paddingLeft = "0px";
       }
-      front.appendChild(frontSubDiv);
-      frontSubDiv.append(weeksLi);
-      weeksLi.appendChild(weeksP);
+    } else if (category === "weeks_on_list") {
+      if (book["weeks_on_list"] >= 1) {
+        let weeksLi = document.createElement("li");
+        weeksLi.setAttribute("class", "weeks_on_list");
+        weeksLi.textContent = book[category];
+        let weeksP = document.createElement("p");
+        if (book["weeks_on_list"] === 1) {
+          weeksP.innerHTML = "Week on list";
+        } else {
+          weeksP.innerHTML = "Weeks on list";
+        }
+        front.appendChild(frontSubDiv);
+        frontSubDiv.append(weeksLi);
+        weeksLi.appendChild(weeksP);
+      }
     }
   });
 
