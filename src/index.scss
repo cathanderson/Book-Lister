@@ -5,18 +5,11 @@
 @import "./styles/sidebar.scss";
 @import "./styles/everything_but.scss";
 
-// $olive: #A69A71;
-// $soft-white: #F5F4F3;
-// $lightest-blush: #f9c1ad;
-// $light-blush: #f9c1ad;
-// $medium-blush: #d08974;
-// $mocha: #764337;
-
 * {
 font-family: 'Montserrat', sans-serif;
 font-weight: 300;
 }
 
 body {
-    background-color: $light-blush;
+    background-color: $light-blush; 
 }
