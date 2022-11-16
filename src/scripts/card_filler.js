@@ -41,7 +41,7 @@ function titleize(str) {
 }
 
 export const cardFiller = function (book, i) {
-  const frontData = ["book_image", "title", "author"]; 
+  const frontData = ["book_image", "title", "author"];
   const frontSubData = ["rank", "weeks_on_list"];
   const backData = ["description", "buy_links[5].url", "amazon_product_url"];
 
@@ -74,12 +74,12 @@ export const cardFiller = function (book, i) {
     } else if (category === "author") {
       let li = document.createElement("li");
       li.setAttribute("class", "author");
-      li.textContent = (book.author);
+      li.textContent = book.author;
       firstFrontSubDiv.appendChild(li);
       front.appendChild(firstFrontSubDiv);
-    } 
+    }
   });
-  
+
   let frontSubDiv = document.createElement("div");
   frontSubDiv.setAttribute("class", "rank-week-div");
 
@@ -139,10 +139,12 @@ export const cardFiller = function (book, i) {
         a.setAttribute("href", book[category]);
         button.textContent = "...Or purchase from Amazon";
       }
-      
+
       backSubDiv.appendChild(li);
       li.appendChild(a);
       a.appendChild(button);
+
+      button.addEventListener("click", (e) => e.stopPropagation());
     }
     back.appendChild(backSubDiv);
   });
