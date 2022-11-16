@@ -214,7 +214,7 @@ section {
   margin-top: auto;
 }
 
-img {
+.book_image > img {
   width: auto;
   min-width: 170px;
   max-width: 205px;
@@ -366,7 +366,7 @@ option {
   color: #F5F4F3;
   border-color: #b1bb8d;
   cursor: pointer;
-  box-shadow: 1.5px 1.5px 1.5px rgba(58, 61, 38, 0.4117647059);
+  box-shadow: 1px 1px 1px rgba(58, 61, 38, 0.4117647059);
 }
 
 #date-picker {
@@ -377,7 +377,17 @@ option {
   border-color: #b1bb8d;
   border-style: solid;
   cursor: pointer;
-  box-shadow: 1.5px 1.5px 1.5px rgba(58, 61, 38, 0.4117647059);
+  box-shadow: 1px 1px 1px rgba(58, 61, 38, 0.4117647059);
+}
+
+#links-container {
+  margin: 5px;
+}
+
+.social-link {
+  height: 50px;
+  width: auto;
+  margin: 10px;
 }
 
 #everything-but-app-title {
