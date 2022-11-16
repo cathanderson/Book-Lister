@@ -126,12 +126,20 @@ export const cardFiller = function (book, i) {
   backSubDiv.setAttribute("class", "back-buttons-div");
 
   backData.forEach((category) => {
+    // console.log(book[category]);
     let li = document.createElement("li");
     // li.setAttribute("class", category);
     if (category === "description") {
-      li.setAttribute("class", category);
-      li.textContent = book[category];
-      back.appendChild(li);
+      if (book["description"] === "") {
+        li.setAttribute("class", category);
+        li.textContent =
+          "No description available for this one... Feel free to judge this book by its cover 😉";
+        back.appendChild(li);
+      } else {
+        li.setAttribute("class", category);
+        li.textContent = book[category];
+        back.appendChild(li);
+      }
     } else {
       let a = document.createElement("a");
       let button = document.createElement("button");

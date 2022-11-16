@@ -163,8 +163,11 @@ a {
     margin-top: auto;
 }
 
+a > button {
+    margin: 6px;
+}
 button {
-    margin: 5px;
+    margin: 8px;
     padding: 4px;
     cursor: pointer;
     font-weight: 500;
