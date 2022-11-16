@@ -1,4 +1,4 @@
-## NYT Books Data Visualization _(...more creative name to come soon)_
+## Book Lister
 
 ### **Background** 🏞
 
