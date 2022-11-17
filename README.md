@@ -29,7 +29,7 @@ In ***Book Lister***, users can:
 ### **...Vs. Reality** 🖥
 
 ![Example live screenshot 1](./assets/bl-live-screengrab.png)
-_Paper Nonfiction List Example_
+_Paperback Nonfiction List Example_
 <br><br>
 ![Example live screenshot 2](./assets/bl-live-screengrab-2.png)
 _Business Books List Example_
