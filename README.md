@@ -52,19 +52,88 @@ This project will be implemented with the following technologies:
 - Webpack and Babel to bundle and transpile the source JavaScript code 🚀
 - npm to manage project dependencies 👀
 
+### **Code Highlights** ⚡️
 
-### **Implementation Timeline** 📆
+A dataFetcher function is called immediately upon first render fo the app. This function calls the NYT Books API and creates the appropriate book cards based on the response from the API. 
 
-**Thursday Afternoon**: Complete final proposal and setup project, including getting webpack up and running.
+```js 
+export const dataFetcher = async function (date, list) {
+  if (!date) date = "current";
+  if (!list) list = "combined-print-and-e-book-fiction";
+  const url = `https://api.nytimes.com/svc/books/v3/lists/${date}/${list}.json?api-key=P8pcb2dgnGF9YiOs6vGO2ATSlJvDl78Z`;
+  fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Networking issue :/");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      //RESETTING LIST TITLE HEADER
+      const listTitle = document.getElementById("list-title");
+      listTitle.textContent = `${data.results.list_name} Best Sellers`;
 
-**Friday**: Build a basic HTML skeleton for main and side sections. Ensure capability of rendering results from API calls in browser using AJAX. Flesh out a basic Card/Book class. Build a lightweight backend to hide API keys/allow for CORS proxy if needed.
+      for (let i = 0; i < data.results.books.length; i++) {
+        // MAKING CARD
+        const card = document.createElement("div");
+        card.setAttribute("id", `card-${i + 1}`);
+        card.setAttribute("class", "card");
 
-**Weekend**: Implement display of main book/card grid based on list title, as well as accurate data fields on cards. Implement flipping action for cards.
+        // APPENDING CARD TO MAIN SECTION
+        const cardHolder = document.getElementById("card-holder");
+        cardHolder.appendChild(card);
 
-**Monday**: Implement ability to search historical best seller lists based on user interaction with a calendar or some other form in the side panel.
+        // CARD FLIPPER
+        card.addEventListener("click", (e) => {
+          card.classList.toggle("is-flipped");
+        });
+      }
+      data.results.books.forEach((book, i) => {
+        allCardFiller.cardFiller(book, i);
+      });
+   ...
 
-**Tuesday**: Troubleshooting, refactoring, and CSS Styling
+    .catch((error) => {
+      console.error(error);
+    });
+};
+```
 
-**Wednesday**: Troubleshooting, refactoring, and CSS Styling. If time allows, add a secondary tab to allow users to search for independent bookstores in their area. Finalize presentation/fill out scorecard.
+A cardFiller function is what ends up actually filling the cards with relevant book data. This function iterates through the appropriate fields of the API's response an manipulates the DOM to create the beautiful cards you see within the app. 
 
-**Thursday Morning**: Deploy to GitHub pages. If time allows, rewrite this proposal as a production README.
+For example, here's the part of the cardFiller function that creates the HTML elements that display each book's list rank and number of weeks on its list. 
+
+```js 
+  frontSubData.forEach((category) => {
+    if (category === "rank") {
+      let rankLi = document.createElement("li");
+      rankLi.setAttribute("class", "rank");
+      rankLi.textContent = "# " + book[category];
+      let rankP = document.createElement("p");
+      rankP.innerHTML = "Rank";
+      front.appendChild(frontSubDiv);
+      frontSubDiv.appendChild(rankLi);
+      rankLi.appendChild(rankP);
+      if (book["weeks_on_list"] === 0) {
+        frontSubDiv.style.display = "block";
+        rankLi.style.paddingLeft = "0px";
+      }
+    } else if (category === "weeks_on_list") {
+      if (book["weeks_on_list"] >= 1) {
+        let weeksLi = document.createElement("li");
+        weeksLi.setAttribute("class", "weeks_on_list");
+        weeksLi.textContent = book[category];
+        let weeksP = document.createElement("p");
+        if (book["weeks_on_list"] === 1) {
+          weeksP.innerHTML = "Week on list";
+        } else {
+          weeksP.innerHTML = "Weeks on list";
+        }
+        front.appendChild(frontSubDiv);
+        frontSubDiv.append(weeksLi);
+        weeksLi.appendChild(weeksP);
+      }
+    }
+  });
+```
+

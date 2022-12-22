@@ -34,7 +34,6 @@ export const dataFetcher = async function (date, list) {
       return response.json();
     })
     .then((data) => {
-      console.log(data);
       //RESETTING LIST TITLE HEADER
       const listTitle = document.getElementById("list-title");
       listTitle.textContent = `${data.results.list_name} Best Sellers`;
