@@ -37,4 +37,7 @@ export const dropdownMaker = async function () {
 
 export const defaultDateSetter = async function () {
   document.getElementById("date-picker").valueAsDate = new Date();
+  document.getElementById("date-picker").max = new Date()
+    .toISOString()
+    .split("T")[0];
 };
